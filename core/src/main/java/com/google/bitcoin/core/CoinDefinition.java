@@ -24,7 +24,7 @@ import sun.management.resources.agent_ko;
 public class CoinDefinition {
     private static final Logger log = LoggerFactory.getLogger(CoinDefinition.class);
 
-    public static final String coinName = "DIMEcoin";
+    public static final String coinName = "Dimecoin";
     public static final String coinTicker = "DIME";
     public static final String coinURIScheme = "dime";
     public static final String coinURIScheme2 = "dimecoin";
@@ -39,15 +39,10 @@ public class CoinDefinition {
     }
     public static final CoinPrecision coinPrecision = CoinPrecision.Coins;
 
+    public static final String BLOCKEXPLORER_BASE_URL_PROD = "https://chainz.cryptoid.info/dime/";
+    public static final String BLOCKEXPLORER_BASE_URL_TEST = "https://chainz.cryptoid.info/dime/";
 
-    //public static final String BLOCKEXPLORER_BASE_URL_PROD = "http://quarkexplorer.com/";
-    //public static final String BLOCKEXPLORER_BASE_URL_TEST = "http://quarkexplorer.com/";
-    public static final String BLOCKEXPLORER_BASE_URL_PROD = "http://qrk.blockr.io/";
-    public static final String BLOCKEXPLORER_BASE_URL_TEST = "http://qrk.blockr.io/";
-    public static final String BLOCKEXPLORER_PATH_URL_PROD = "block/info/";
-    public static final String BLOCKEXPLORER_PATH_URL_TEST = "block/info/";
-
-    public static final String DONATION_ADDRESS = "74qwyi23gq15iJvGQShbSEQ5nvvRF3mWxp";  //HashEngineering donation QRK address
+    public static final String DONATION_ADDRESS = "74qwyi23gq15iJvGQShbSEQ5nvvRF3mWxp";
 
     enum CoinHash {
         SHA256,
