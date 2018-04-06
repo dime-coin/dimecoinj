@@ -36,7 +36,9 @@ public class BuildCheckpoints {
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);
         final PeerGroup peerGroup = new PeerGroup(params, chain);
-        peerGroup.addAddress(InetAddress.getLocalHost());
+        for (String addr : CoinDefinition.dnsSeeds) {
+            peerGroup.addAddress(InetAddress.getByName(addr));
+        }
 
         long now = new Date().getTime() / 1000;
         peerGroup.setFastCatchupTimeSecs(now);
