@@ -25,9 +25,9 @@
         <url>http://code.google.com/p/bitcoinj/source/browse</url>
     </scm>
 
-  <name>quarkcoinj Parent</name>
-  <description>Provides the common configuration for the quarkcoinJ modules</description>
-  <url>https://github.com/HashEngineering/quarkcoinj</url>
+  <name>Dimecoinj Parent</name>
+  <description>Provides the common configuration for the dimecoinj modules</description>
+  <url>https://github.com/dime-coin/dimecoinj</url>
 
   <licenses>
     <license>
@@ -37,26 +37,6 @@
       <comments>A business-friendly OSS license</comments>
     </license>
   </licenses>
-
-  <issueManagement>
-    <system>Google Code</system>
-    <url>http://code.google.com/p/quarkcoinj/issues/list</url>
-  </issueManagement>
-
-  <mailingLists>
-    <mailingList>
-      <name>quarkcoinj Google Group</name>
-      <post>https://groups.google.com/forum/#!forum/quarkcoinj</post>
-    </mailingList>
-  </mailingLists>
-
-  <repositories>
-    <repository>
-        <id>quarkcoinj-distribution</id>
-        <url>https://distribution.bitcoinj.googlecode.com/git/releases</url>
-    </repository>
-  </repositories>
-
 
   <!-- Common build plugin configuration -->
   <build>
@@ -82,9 +62,6 @@
         <artifactId>slf4j-api</artifactId>
         <version>1.7.5</version>
       </dependency>
-      <!-- quarkcoinj consumers are expected to provide their own SLF4J adapters
-    such as logback, slf4j-log4j12, slf4j-jcl and so on
-    see http://www.slf4j.org/faq.html -->
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-jdk14</artifactId>

@@ -38,6 +38,7 @@ out/
 # Gradle files
 .gradle/
 build/
+target/
 
 # Intellij
 *.iml
