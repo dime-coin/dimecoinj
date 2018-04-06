@@ -80,8 +80,7 @@ public class CoinDefinition {
     public static final int MAX_MONEY = 500000000;                 //main.h:  MAX_MONEY
     public static final String MAX_MONEY_STRING = "500000000";     //main.h:  MAX_MONEY
 
-    public static final BigInteger DEFAULT_MIN_TX_FEE = BigInteger.valueOf(10);   // MIN_TX_FEE
-    public static final BigInteger DEFAULT_MIN_RELAY_TX_FEE = BigInteger.valueOf(100);   // MIN_TX_FEE
+    public static final BigInteger DEFAULT_MIN_TX_FEE = BigInteger.ZERO;
     public static final BigInteger DUST_LIMIT = CoinDefinition.CENT; //main.h CTransaction::GetMinFee        0.01 coins
 
     public static final int PROTOCOL_VERSION = 70001;          //version.h PROTOCOL_VERSION
