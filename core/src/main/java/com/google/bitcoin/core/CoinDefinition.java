@@ -29,8 +29,6 @@ public class CoinDefinition {
     public static final String coinURIScheme = "dime";
     public static final String coinURIScheme2 = "dimecoin";
     public static final String coinInternalName = "dimecoin";
-    public static final String cryptsyMarketId = "0";
-    public static final String cryptsyMarketCurrency = "BTC";
     public static final String PATTERN_PRIVATE_KEY_START = "6";
 
     public enum CoinPrecision {
