@@ -126,9 +126,6 @@ public abstract class NetworkParameters implements Serializable {
         Block genesisBlock = new Block(n);
         Transaction t = new Transaction(n);
         try {
-            // A script containing the difficulty bits and the following message:
-            //
-            //   "Digitalcoin, A Currency for a Digital Age"
             byte[] bytes = Hex.decode
                     ("04b217bb4e022309");
             t.addInput(new TransactionInput(n, t, bytes));
