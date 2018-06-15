@@ -203,7 +203,7 @@ public class CoinDefinition {
             "76.28.67.91",
             "81.214.104.222"
     };
-    
+
     public static int minBroadcastConnections = 1;   //0 for default; we need more peers.
     //
     // TestNet - dimecoin - not tested
