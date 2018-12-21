@@ -22,7 +22,7 @@
     <groupId>com.google</groupId>
 
     <artifactId>dimecoinj-parent</artifactId>
-    <version>0.12.6</version>
+    <version>0.12.7</version>
 
   </parent>
   <modelVersion>4.0.0</modelVersion>
