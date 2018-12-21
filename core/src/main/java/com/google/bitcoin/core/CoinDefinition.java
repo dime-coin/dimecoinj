@@ -152,27 +152,28 @@ public class CoinDefinition {
             return Utils.toNanoCoins(1, 0);
         }
 
-		BigInteger nSubsidy = Utils.toNanoCoins(1024, 0);
+	BigInteger nSubsidy = Utils.toNanoCoins(1024, 0);
 		
-		if(nHeight < 3310000){ // Before LWMA-3
-			// Subsidy is cut in half every 512000 blocks
-			nSubsidy = nSubsidy.shiftRight(nHeight / 512000);
+	if(nHeight < 3310000) { // Before LWMA-3
+		// Subsidy is cut in half every 512000 blocks
+		nSubsidy = nSubsidy.shiftRight(nHeight / 512000);
 
-			long modNumber = nHeight % 1024;
+		long modNumber = nHeight % 1024;
 
-			if(modNumber == 0){
-				modNumber = 1024; //every 1024 have a big bonus
-			}
-
-			nSubsidy = nSubsidy.multiply(BigInteger.valueOf(modNumber));
-
-			//premined 8% for dev, support, bounty, and giveaway etc
-			if(nHeight > 9 && nHeight < 128){
-				nSubsidy = Utils.toNanoCoins(350000000, 0);
-			}
-		else {
-			nSubsidy = Utils.toNanoCoins(8192, 0);
+		if(modNumber == 0){
+			modNumber = 1024; //every 1024 have a big bonus
 		}
+
+		nSubsidy = nSubsidy.multiply(BigInteger.valueOf(modNumber));
+
+		//premined 8% for dev, support, bounty, and giveaway etc
+		if(nHeight > 9 && nHeight < 128){
+			nSubsidy = Utils.toNanoCoins(350000000, 0);
+		}
+	}
+	else {
+		nSubsidy = Utils.toNanoCoins(8192, 0);
+	}
 
         return nSubsidy;
     }
