@@ -48,8 +48,8 @@ public class CoinDefinition {
         quark
     };
     public static final CoinHash coinHash = CoinHash.quark;
+    public static boolean checkpointFileSupport = false;
 
-    public static boolean checkpointFileSupport = true;
     //Original Values
     public static final int TARGET_TIMESPAN = (int)(65536);  // 18 hours minutes per difficulty cycle, on average.
     public static final int TARGET_SPACING = (int)(64);  // 64 seconds per block.
@@ -84,7 +84,7 @@ public class CoinDefinition {
     public static final int PROTOCOL_VERSION = 70004;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 209;        //version.h MIN_PROTO_VERSION
 
-    public static final int BLOCK_CURRENTVERSION = 1;   //CBlock::CURRENT_VERSION
+    public static final int BLOCK_CURRENTVERSION = 112;
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
 
 
@@ -198,49 +198,6 @@ public class CoinDefinition {
     public static void initCheckpoints(Map<Integer, Sha256Hash> checkpoints)
     {
         checkpoints.put( 0,         new Sha256Hash("00000d5a9113f87575c77eb5442845ff8a0014f6e79e2dd2317d88946ef910da"));
-        checkpoints.put( 20000,     new Sha256Hash("0000008e1581ca6fc2a796401be25dd68bd444a286a322f1f7354b2f102e2e26"));
-        checkpoints.put( 30000,     new Sha256Hash("00000034a4be19182d0e8e56bad69541be2e6fa3274043e6c0fb90ad4a436820"));
-        checkpoints.put( 40000,     new Sha256Hash("0000004227fb1fc8dfd51919cdc080ede60c3c8590b38e6c88b3d733d805b779"));
-        checkpoints.put( 50000,     new Sha256Hash("0000001f6750308a0683f327488c0393e2b255ad0aa61d88716cd10bd8d44b5f"));
-        checkpoints.put( 60000,     new Sha256Hash("00000007b938fb5231039fb2f5330cce860e3db7a6542d411bfa796e0c88b20d"));
-        checkpoints.put( 70000,     new Sha256Hash("00000001a9f5cb9dd8a033b0b112bd946795bfd9266bff087eebce699e028696"));
-        checkpoints.put( 80000,     new Sha256Hash("00000000f87ac340b2ac8f3a33659b27857a1af7a4a2c69b6c6ec85af54b155b"));
-        checkpoints.put( 90000,     new Sha256Hash("0000000054e78ffd1a9bed31df6833bd5d86b79f3b18d45dc8c6e8455a5ac6c3"));
-        checkpoints.put( 100000,    new Sha256Hash("00000000539760ef8dd9d933743b6281e8337359ecfa35917f924e52156c7566"));
-        checkpoints.put( 109346,    new Sha256Hash("0000000003a8062398ad2479884ee028ca0b7cc2daa143b3173afa7068976b74"));
-        checkpoints.put( 250000,    new Sha256Hash("000000001ecc6fd9f2a2e50722762de18bc96599e6d00e3ddc9e2d97d4b177ff"));
-        checkpoints.put( 350000,    new Sha256Hash("000000001929a0b35aa3199a45d6f5a4a936b3347ae5cea2cea2b8b5ffdab731"));
-        checkpoints.put( 500000,    new Sha256Hash("00000000129e32df9b68e9478fb99ad094ca3311e26b853a07d864c557ae3696"));
-        checkpoints.put( 600000,    new Sha256Hash("000000000c12b6426aafd24960e86704c7a2eb4b73f96211f00070d939f3bbba"));
-        checkpoints.put( 700000,    new Sha256Hash("000000002954073d358a9c13de05711b7be77d669b02c40435931e801cd1c4ed"));
-        checkpoints.put( 800000,    new Sha256Hash("00000000063b01cae9db85adab32585e02f8c31ac9c26c22a5372408db32ef72"));
-        checkpoints.put( 900000,    new Sha256Hash("0000000018b771af50cb42842fdf16276458b27f20c8e95595e05bacd5c377ab"));
-        checkpoints.put(1000000,    new Sha256Hash("000000001e2ef1ef0f9f587150e598faa2e74ff95c0bcdd2026d2688b2bbf13a"));
-        checkpoints.put(1100000,    new Sha256Hash("00000000355853adaf8f538c6395b6ab08eb37ada54996b3ac3ff56f1e1cd372"));
-        checkpoints.put(1200000,    new Sha256Hash("0000000003edb0a84251f028361def13930b5ce87adc34680100d3a0f8563418"));
-        checkpoints.put(1300000,    new Sha256Hash("000000015c75a460f24f920db11fd4f6a98fbe5242253bc7c98e3f2900d05586"));
-        checkpoints.put(1400000,    new Sha256Hash("000000002c8fcd56cf4b0a53aa0d7dbf0050ad73fcc218d4015fb70070863d7e"));
-        checkpoints.put(1500000,    new Sha256Hash("000000007f0008d7b697589583d58cc0d83a62f7364859711576fe50bca70f06"));
-        checkpoints.put(1550000,    new Sha256Hash("000000004952592fc7376464d63412f01d2877587a19a08432edd788b005723e"));
-        checkpoints.put(1700000,    new Sha256Hash("00000003b6cd157bfe643cd3c624ec32096709d2bea77191def23ab62b61b73d"));
-        checkpoints.put(1800000,    new Sha256Hash("00000000002f3679c71961e3d989244a2f4e4e9cb75ccb7ff7ac3c500d25ee19"));
-        checkpoints.put(1900000,    new Sha256Hash("0000000001acf206f3c7e4d181f550281cae2735ef1a427f089f45f3651c5717"));
-        checkpoints.put(2000000,    new Sha256Hash("000000000a212f4cfab5d16c26868c37067a4642691b77230bb68a60a10c97e1"));
-        checkpoints.put(2100000,    new Sha256Hash("000000002be14a1a595300b753bb65ac332bfa9715db3535c09d02b0122d8c82"));
-        checkpoints.put(2200000,    new Sha256Hash("0000000028908252525e08a5039a6a2f7f4dc5dae8715b30e86af9286134411f"));
-        checkpoints.put(2300000,    new Sha256Hash("0000000000dac114de7426040d12269c3b48724a64a186d1fb82b0be5dd3f07b"));
-        checkpoints.put(2400000,    new Sha256Hash("0000000000cb3e9c9c2082e80465ea6780320fb3481d67964bcd6965a2077380"));
-        checkpoints.put(2500000,    new Sha256Hash("0000000000010f978067c92689a39ef8c6f17849a6e3c6c86ac8685e8f7f84af"));
-        checkpoints.put(2600000,    new Sha256Hash("0000000000154d18cff372412d641e4f4a17797e1eb5a1ff714910b31dad1632"));
-        //new checkpoints added in version 1.9.0.0
-        checkpoints.put(2700000,    new Sha256Hash("000000000005fb1c672edbd26aad6e86db15dc6b7f2ad9bf0bdefdd7a2fe74c5"));
-        checkpoints.put(2800000,    new Sha256Hash("000000000001ee0e0a348d177511ed2d79b4ec98359242c0b386e1931d42489a"));
-        checkpoints.put(2900000,    new Sha256Hash("000000000002c4539330ab986e1fa4f2fe720559d8858c381859f3b896cac7a5"));
-        //new checkpoints added in version 1.9.0.2
-        checkpoints.put(3000000,    new Sha256Hash("000000000000c7552284192bd1e3e7b1b7648ec4868cef082f2aa4945f7bad36"));
-        checkpoints.put(3100000,    new Sha256Hash("00000000000e46ee7f527b6ba4b557ef49a9c17ae4a852a7e0fe3023048288f4"));
-        //new checkpoint added in version 1.9.1.0
-        checkpoints.put(3200000,    new Sha256Hash("0000000000015dfaf2bf3f4c05192f61baa66bd682df1359bf77bfa07c2c9e0c"));
     }
 
 
